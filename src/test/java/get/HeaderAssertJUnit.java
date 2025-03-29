@@ -7,7 +7,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
 
-public class G01 {
+public class HeaderAssertJUnit {
 
     @Test
     public void getPetTest() {

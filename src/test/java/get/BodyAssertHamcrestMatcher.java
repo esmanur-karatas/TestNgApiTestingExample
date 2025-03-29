@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
-public class G03 {
+public class BodyAssertHamcrestMatcher {
     // BU TESTTE TEK DATANIN BODYSİ ÜZERİNDE HAMCREST MATCHER İLE DOĞRULAMA YAPTIK
        /*
        https://jsonplaceholder.typicode.com/posts/1

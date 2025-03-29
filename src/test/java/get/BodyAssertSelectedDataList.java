@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
-public class G04 {
+public class BodyAssertSelectedDataList {
     @Test
     public void testName() {
              /*

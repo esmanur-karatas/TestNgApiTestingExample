@@ -1,14 +1,13 @@
 package get;
 
 import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class G02 {
+public class HeaderAssertRestAssured {
     @Test
     public void testName() {
             /*
