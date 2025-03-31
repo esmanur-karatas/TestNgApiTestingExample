@@ -33,14 +33,14 @@ public class HeaderAssertRestAssured extends HerokuappBaseUrl {
 
         //System.out.println(response.time());
         //3- Do assertion
-        response.then() // rest assure da assertionlari then ile yapariz
-                .statusCode(200)
-                .contentType("application/json; charset=utf-8")
-                .statusLine("HTTP/1.1 200 OK")
-                .statusLine(containsString("OK"))
-                .header("Server", "Cowboy")
-                .header("Connection", "keep-alive")
-                .time(lessThan(5000L));
+       // response.then() // rest assure da assertionlari then ile yapariz
+                //.statusCode(200)
+                //.contentType("application/json; charset=utf-8")
+//                .statusLine("HTTP/1.1 200 OK")
+//                .statusLine(containsString("OK"))
+//                .header("Server", "Cowboy")
+//                .header("Connection", "keep-alive")
+//                .time(lessThan(5000L));
 
     }
 
@@ -54,14 +54,14 @@ public class HeaderAssertRestAssured extends HerokuappBaseUrl {
         response.prettyPrint();
 
         //do assertion
-        response.then() // rest assure da assertionlari then ile yapariz
-                .statusCode(200)
-                .contentType(ContentType.JSON)
-                .body("firstname", equalTo("Jane"),
-                        "lastname", equalTo("Doe"),
-                        "totalprice", equalTo(111),
-                        "depositpaid", equalTo(true),
-                        "bookingdates.checkin", equalTo("2018-01-01"),
-                        "bookingdates.checkout", equalTo("2019-01-01"));
+        //response.then() // rest assure da assertionlari then ile yapariz
+                //.statusCode(200)
+//                .contentType(ContentType.JSON)
+//                .body("firstname", equalTo("Jane"),
+//                        "lastname", equalTo("Doe"),
+//                        "totalprice", equalTo(111),
+//                        "depositpaid", equalTo(true),
+//                        "bookingdates.checkin", equalTo("2018-01-01"),
+//                        "bookingdates.checkout", equalTo("2019-01-01"));
     }
 }

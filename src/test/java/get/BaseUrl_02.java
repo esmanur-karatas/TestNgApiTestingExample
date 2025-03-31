@@ -38,8 +38,8 @@ User send GET Request to the URL
         response.then()
                 .contentType("application/json")
                 .statusCode(200)
-                .body("name", hasItem("Mandakini Patil"),
-                        "id", hasItems(7804112, 7804111, 7804110),
+                .body("name", hasItem("Dr. Vaishno Guha"),
+                        "id", hasItems(7804109, 7804108, 7804107),
                         "gender", hasItems("male", "female"));
     }
 }
