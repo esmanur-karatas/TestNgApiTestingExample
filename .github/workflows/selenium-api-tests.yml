@@ -1,0 +1,44 @@
+name: Run Selenium & API Tests
+
+on:
+  push:
+    branches:
+      - main  # Ana branch'e push yapıldığında çalıştır
+  pull_request:
+    branches:
+      - main  # PR açıldığında çalıştır
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # İşlemci ortamı
+
+    services:
+      selenium:
+        image: selenium/standalone-chrome  # Chrome tarayıcı içeren Selenium ortamı
+        ports:
+          - 4444:4444
+
+    steps:
+      - name: Reposityo Kopyalanıyor
+        uses: actions/checkout@v3  # Kodu al
+
+      - name: Java Kurulumu
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'  # OpenJDK
+          java-version: '17'  # Java 17 kullan
+
+      - name: Maven Bağımlılıkları Kuruluyor
+        run: mvn install  # Maven bağımlılıklarını indir
+
+      - name: API Testlerini Çalıştır
+        run: mvn test -Dtest=APITest  # API testlerini çalıştır (JUnit/TestNG sınıf adını yaz)
+
+      - name: Selenium Testlerini Çalıştır
+        run: mvn test -Dtest=UITest  # Selenium testlerini çalıştır (Test sınıf adını yaz)
+
+      - name: Test Sonuçlarını Yükle
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: target/surefire-reports  # Test raporlarını sakla
