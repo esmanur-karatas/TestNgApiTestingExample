@@ -27,7 +27,7 @@ public class PathParams extends Reqres_BaseUrl {
 
 
     @Test
-    public void name() {
+    public void PathParamsTest() {
         //1- Set the url
         spec.pathParams("first", "users", "second",5);
 

@@ -1,5 +1,6 @@
 package get;
 
+import base.BaseTest;
 import base_Urls.GoRest_BaseUrl;
 import base_Urls.GoRest_BaseUrl02;
 import io.restassured.response.Response;
@@ -11,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.hasItems;
 
-public class BaseUrl_02 {
+public class BaseUrl_02 extends BaseTest {
     /*
 https://gorest.co.in/public/v2/users
 User send GET Request to the URL
@@ -24,7 +25,7 @@ User send GET Request to the URL
  */
 
     @Test
-    public void name() {
+    public void BaseUrl_02Test() {
         //1- Set the URL
         RequestSpecification spec = setupUrl();
         spec.pathParam("first", "users");
@@ -37,8 +38,8 @@ User send GET Request to the URL
         response.then()
                 .contentType("application/json")
                 .statusCode(200)
-                .body("name", hasItem("Bhramar Ahluwalia"),
-                        "id", hasItems(7803045, 7803046, 7803047),
+                .body("name", hasItem("Mandakini Patil"),
+                        "id", hasItems(7804112, 7804111, 7804110),
                         "gender", hasItems("male", "female"));
     }
 }

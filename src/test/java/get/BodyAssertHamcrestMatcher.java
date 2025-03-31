@@ -1,10 +1,11 @@
 package get;
+import base.BaseTest;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
-public class BodyAssertHamcrestMatcher {
+public class BodyAssertHamcrestMatcher extends BaseTest {
     // BU TESTTE TEK DATANIN BODYSİ ÜZERİNDE HAMCREST MATCHER İLE DOĞRULAMA YAPTIK
        /*
        https://jsonplaceholder.typicode.com/posts/1
@@ -17,7 +18,7 @@ public class BodyAssertHamcrestMatcher {
 */
 
     @Test
-    public void testName() {
+    public void BodyAssertHamcrestMatcherTest() {
         //1- Set URL
         String url="https://jsonplaceholder.typicode.com/posts/1";
 

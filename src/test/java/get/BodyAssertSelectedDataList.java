@@ -1,12 +1,13 @@
 package get;
+import base.BaseTest;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
-public class BodyAssertSelectedDataList {
+public class BodyAssertSelectedDataList extends BaseTest {
     @Test
-    public void testName() {
+    public void BodyAssertSelectedDataListTest() {
              /*
     https://jsonplaceholder.typicode.com/todos
     User send GET Request to the URL

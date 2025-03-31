@@ -1,5 +1,6 @@
 package get;
 
+import base.BaseTest;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 
-public class StringDataAssertion {
+public class StringDataAssertion extends BaseTest {
 
     @Test
     public void testInvalidTodo() {

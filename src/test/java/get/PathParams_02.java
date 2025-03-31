@@ -28,7 +28,7 @@ public class PathParams_02 extends RestCountries_BaseUrl {
          */
 
     @Test
-    public void name() {
+    public void PathParams_02Test() {
         spec.pathParams("first","lang", "second", "turkish");
 
         Response response = given(spec).get("{first}/{second}");

@@ -1,0 +1,58 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" parallel="tests" thread-count="13">
+    <test name="AssertDatum Test Report">
+        <classes>
+            <class name="get.AssertDatum"/>
+        </classes>
+    </test>
+    <test name="BaseUrl Test Report">
+        <classes>
+            <class name="get.BaseUrl"/>
+        </classes>
+    </test>
+    <test name="BaseUrl_02 Test Report">
+        <classes>
+            <class name="get.BaseUrl_02"/>
+        </classes>
+    </test>
+    <test name="BodyAssertHamcrestMatcher Test Report">
+        <classes>
+            <class name="get.BodyAssertHamcrestMatcher"/>
+        </classes>
+    </test>
+    <test name="BodyAssertSelectedDataList Test Report">
+        <classes>
+            <class name="get.BodyAssertSelectedDataList"/>
+        </classes>
+    </test>
+    <test name="HeaderAssertRestAssured Test Report">
+        <classes>
+            <class name="get.HeaderAssertRestAssured"/>
+        </classes>
+    </test>
+    <test name="NegativeTestHardAssertion Test Report">
+        <classes>
+            <class name="get.NegativeTestHardAssertion"/>
+        </classes>
+    </test>
+    <test name="PathParams Test Report">
+        <classes>
+            <class name="get.PathParams"/>
+        </classes>
+    </test>
+    <test name="PathParams_02 Test Report">
+        <classes>
+            <class name="get.PathParams_02"/>
+        </classes>
+    </test>
+    <test name="QueryParamHasSize Test Report">
+        <classes>
+            <class name="get.QueryParamHasSize"/>
+        </classes>
+    </test>
+    <test name="StringDataAssertion Test Report">
+        <classes>
+            <class name="get.StringDataAssertion"/>
+        </classes>
+    </test>
+</suite>

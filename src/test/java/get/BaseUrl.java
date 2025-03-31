@@ -22,7 +22,7 @@ User send GET Request to the URL
  */
 
     @Test
-    public void name() {
+    public void BaseUrlTest() {
         //1- Set the URL
         spec.pathParam("first", "users");
 
@@ -34,8 +34,8 @@ User send GET Request to the URL
         response.then()
                 .contentType("application/json")
                 .statusCode(200)
-                .body("name", hasItem("Bhramar Ahluwalia"),
-                        "id", hasItems(7803045, 7803046, 7803047),
+                .body("name", hasItem("Mandakini Patil"),
+                        "id", hasItems(7804112, 7804111, 7804110),
                         "gender", hasItems("male", "female"));
     }
 }

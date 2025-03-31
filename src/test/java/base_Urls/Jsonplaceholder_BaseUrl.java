@@ -1,11 +1,12 @@
 package base_Urls;
 
+import base.BaseTest;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 
-public class Jsonplaceholder_BaseUrl {
+public class Jsonplaceholder_BaseUrl extends BaseTest {
     protected RequestSpecification spec;
     @BeforeMethod
     public void setup(){

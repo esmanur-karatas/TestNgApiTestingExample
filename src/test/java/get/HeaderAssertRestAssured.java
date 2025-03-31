@@ -12,7 +12,7 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class HeaderAssertRestAssured extends HerokuappBaseUrl {
     @Test
-    public void testName() {
+    public void HeaderAssertRestAssuredTest() {
             /*
  https://restful-booker.herokuapp.com/booking/34
  HTTP Status Code'unun 200
@@ -45,7 +45,7 @@ public class HeaderAssertRestAssured extends HerokuappBaseUrl {
     }
 
     @Test
-    public void seond() {
+    public void HeaderAssertRestAssuredTest_02() {
         //set url
         specificationHereoku.pathParams("first", "booking", "second", 34);
 
@@ -57,8 +57,8 @@ public class HeaderAssertRestAssured extends HerokuappBaseUrl {
         response.then() // rest assure da assertionlari then ile yapariz
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("firstname", equalTo("Josh"),
-                        "lastname", equalTo("Allen"),
+                .body("firstname", equalTo("Jane"),
+                        "lastname", equalTo("Doe"),
                         "totalprice", equalTo(111),
                         "depositpaid", equalTo(true),
                         "bookingdates.checkin", equalTo("2018-01-01"),

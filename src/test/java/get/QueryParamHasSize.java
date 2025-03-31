@@ -18,7 +18,7 @@ public class QueryParamHasSize extends PetStore_BaseUrl{
  */
 
     @Test
-    public void name() {
+    public void QueryParamHasSizeTest() {
         //1- Set the url
         //status=available
         spec.pathParams("a", "pet", "b", "findByStatus")

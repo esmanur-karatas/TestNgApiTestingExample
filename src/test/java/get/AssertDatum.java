@@ -1,5 +1,6 @@
 package get;
 
+import base.BaseTest;
 import base_Urls.Jsonplaceholder_BaseUrl;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
@@ -31,7 +32,7 @@ public class AssertDatum extends Jsonplaceholder_BaseUrl {
      */
 
     @Test
-    public void testName() {
+    public void AssertDatumTest() {
         //1- Set the url
         spec.pathParam("first", "users");
 

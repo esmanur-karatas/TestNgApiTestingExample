@@ -1,5 +1,6 @@
 package get;
 
+import base.BaseTest;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
 
-public class HeaderAssertJUnit {
+public class HeaderAssertJUnit extends BaseTest {
 
     @Test
     public void getPetTest() {
